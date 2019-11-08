@@ -17,7 +17,18 @@ Struct::Struct(uint8_t* data, endian_t endian)
 }
 
 /**
- * @brief Returns pointer to data array
+ * @brief Sets data array pointer and resets
+ * @param data Pointer to byte array
+ * @return Reference to this
+ */
+Struct& Struct::set_data(uint8_t* data)
+{
+	this->data = data;
+	return reset();
+}
+
+/**
+ * @brief Returns pointer to byte array
  */
 uint8_t* Struct::get_data()
 {
