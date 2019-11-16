@@ -46,6 +46,13 @@ protected:
 	// Methods
 	Struct& set_bytes(uint8_t* bytes, uint32_t num_bytes);
 	Struct& get_bytes(uint8_t* bytes, uint32_t num_bytes);
+
+private:
+	
+	// Copy and assignment operators
+	Struct(const Struct&);
+	Struct& operator=(const Struct&);
+
 };
 
 /**
